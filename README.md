@@ -1,27 +1,20 @@
-# DesafioDesaparecidos
+# Teste Angular - Lista de Pessoas Desaparecidas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
+## Objetivo 
+Criar um aplicativo Angular que exibe uma lista de pessoas desaparecidas usando a API fornecida. A Polícia Judiciária Civil de Mato Grosso oferece acesso ao cidadão uma API de pessoas desaparecidas. Para este teste você deverá implementar uma aplicação que possibilita consultar dados dessas pessoas desaparecidas bem como enviar eventuais informações sobre elas
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Configurar um novo projeto Angular usando o Angular CLI.
 
-## Code scaffolding
+Usar a API fornecida (https://abitus-api.pjc.mt.gov.br/v1/pessoas/aberto/filtro?faixaIdadeFinal=0&faixaIdadeInicial=0&nome=&porPagina=12&sexo=&status=DESAPARECIDO&pagina=0) para buscar os dados das pessoas desaparecidas.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Exibir os dados da API em uma lista na página. Cada item da lista deve conter pelo menos as seguintes informações: nome, idade, sexo e uma foto, se disponível.
 
-## Build
+Implementar uma seção de pesquisa que permite ao usuário filtrar a lista de pessoas desaparecidas por nome, idade e sexo.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Paginar os resultados para exibir 12 pessoas por página.
 
-## Running unit tests
+Ao clicar em um item da lista, o usuário deve ser redirecionado para uma página de detalhes que exibe informações detalhadas da pessoa desaparecida. API:(https://abitus-api.pjc.mt.gov.br/v1/pessoas/${idPessoa})
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Possibilitar o compartilhamento dessa informação com mídias sociais como Facebook, Instagram, Whatsapp e outras que julgar oportuno.
