@@ -1,0 +1,28 @@
+h3{
+    font-family: 'Lato', sans-serif;
+    color: var(--main-text-color);
+    font-size: 25px;
+}
+
+aside{
+    padding: 10px 10px 12px 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.idade {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-small {
+    width: 45%;
+}
+
+p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+    color: var(--secondary-text-color);
+}

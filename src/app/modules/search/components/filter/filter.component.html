@@ -1,0 +1,39 @@
+<aside class="border">
+    <h3>
+        Filtros
+    </h3>
+    <p>Nome </p>
+    <rdev-text-input
+        placeHolder="Vazio"
+        [onlyLetters]="true"
+        (onInputChange)="searchFacade.setFilterNome($event)"
+        [style]="{'width': '100%'}">
+    </rdev-text-input>
+
+    <p>Idade</p>
+    <div class="idade">
+        <rdev-number-input class="input-small"
+            placeHolder="Mínima (1)"
+            (onInputChange)="searchFacade.setFilterAgeMin($event)"
+            [min]="1"
+            [max]="99"
+            [style]="{'width': '100%'}">
+        </rdev-number-input>
+        <rdev-number-input class="input-small"
+            placeHolder="Máxima (99)"
+            (onInputChange)="searchFacade.setFilterAgeMax($event)"
+            [min]="1"
+            [max]="99"
+            [style]="{'width': '100%'}">
+        </rdev-number-input>
+    </div>
+
+    <p>Gênero </p>
+    <rdev-combobox-input
+        [options]="['Masculino', 'Feminino']"
+        [blank]="'Todos'"
+        [blankDisabled]="false"
+        [style]="{'width': '100%'}"
+        (onOptionChange)="searchFacade.setFilterGenre($event)">
+    </rdev-combobox-input>
+</aside>

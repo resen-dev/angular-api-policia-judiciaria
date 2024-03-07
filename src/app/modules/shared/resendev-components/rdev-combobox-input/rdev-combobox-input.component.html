@@ -1,0 +1,6 @@
+<select
+    (change)="selectOption($event)"
+    [ngStyle]="style">
+    <option *ngIf="blank" value="" [disabled]="blankDisabled" selected>{{ blank }}</option>
+    <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+</select>

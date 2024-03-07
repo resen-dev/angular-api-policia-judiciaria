@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --body-background-color: rgba(37,40,45,255);
+    --main-background-color: rgba(12,15,20,255);
+    --main-text-color: rgba(216,217,220,255);
+    --border-color: rgba(201, 201, 201, 0.5);    
+    --secondary-text-color: rgb(210, 217, 221);
+    --button-background-color: rgb(77, 78, 80);
+    --button-background-color-hover: rgb(72, 72, 75);
+    --form-background-color: rgb(95, 95, 109);
+    --form-placeholder-text-color: rgb(197, 197, 204);
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--body-background-color);
+}
+
+.border{
+    border-radius: 8px;
+    border: solid 1px var(--border-color);
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: var(--form-background-color);
+    color: var(--secondary-text-color)
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+select::placeholder {
+    color: var(--form-placeholder-text-color)
+}

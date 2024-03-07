@@ -1,0 +1,7 @@
+<input 
+    type="text"
+    placeholder={{placeHolder}}
+    (keydown)="this.onlyLetters ? this.onlyLettersRegex.test($event.key) : $event.key"
+    (input)="onInputEvent($event)"
+    [ngStyle]="style"
+ />

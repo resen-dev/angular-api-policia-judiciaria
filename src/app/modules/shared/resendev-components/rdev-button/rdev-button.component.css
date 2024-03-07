@@ -1,0 +1,25 @@
+#rdev-button{
+    border: none;
+    padding: 4px;
+    background-color: var(--button-background-color);
+    color: var(--main-text-color);
+    font-size: 17px;
+    border-radius: 4px;
+    text-align: center;
+    align-items: center;
+    display: flex; 
+    align-items: center;
+}
+
+small{
+    padding: 3px;
+}
+
+.divisor{
+    margin-left: 4px;
+}
+
+#rdev-button:hover{
+    cursor: pointer;
+    background-color: var(--button-background-color-hover);
+}

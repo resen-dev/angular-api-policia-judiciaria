@@ -1,0 +1,25 @@
+#search{
+    width: 100%;
+    height: 100%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+        'filter-container list-container'
+        'filter-container list-container';
+}
+
+.list-container, .filter-container{
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.filter-container{
+    grid-area: filter-container;
+}
+
+.list-container{
+    grid-area: list-container;
+}
