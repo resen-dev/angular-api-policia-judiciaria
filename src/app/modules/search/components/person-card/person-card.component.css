@@ -24,7 +24,7 @@
     background-color: var(--person-card-background);
     box-sizing: border-box;
     padding: 8px;
-    min-height: 150px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     border-radius: 0px 0px 4px 4px
@@ -60,17 +60,57 @@ small{
 .info-block {
     display: flex;
     align-items: center;
+    margin-top: 15px;
     margin-right: 20px;
     gap: 5px
 }
 
-
-@media (max-width: 500px) {
+@media (max-width: 1600px) {
     .person-card-image {
         width: 300px;
         height: 300px;
     }
+    
     .person-card-info {
         width: 300px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .person-card-image {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .person-card-info {
+        width: 250px;
+    }
+}
+
+@media (max-width: 900px) {
+    .person-card-image {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .person-card-info {
+        width: 350px;
+    }
+}
+
+@media (max-width: 730px) {
+    .person-card-image {
+        width: 350px;
+        height: 350px;
+        max-width: 95%;
+    }
+    
+    .person-card-info {
+        width: 350px;
+        max-width: 95%;
+    }
+
+    .person-card-container{
+        align-items: center;
     }
 }

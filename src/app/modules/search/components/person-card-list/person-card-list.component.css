@@ -2,8 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    gap: 15px;
-    max-width: 1230px;
+    max-width: 1700px;
     justify-content: center;
-    margin: 0 auto;
+    gap: 15px;
+}
+
+.list > * {
+    margin-bottom: 25px;
 }
