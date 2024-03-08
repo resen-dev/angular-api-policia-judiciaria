@@ -13,8 +13,7 @@
 
 .person-card-image {
     width: 400px;
-    height: 400px;
-    object-fit: cover;
+    object-fit: fill;
     overflow: hidden; 
     border-radius: 4px 4px 0 0
 }

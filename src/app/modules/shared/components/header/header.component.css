@@ -11,36 +11,16 @@ header {
 }
 
 #logo-image{
-    width: 3vw;
+    width: 40px;
     height: auto;
 }
 
 #logo-text{
     font-family: Roboto, Helvetica Neue, sans-serif;
     color: var(--main-text-color);
-    font-size: 1.5vw;   
+    font-size: 20px;   
 }
 
 .logo-container:hover{
     cursor: pointer;
-}
-
-@media screen and (max-width: 900px) {
-    #logo-image{
-        width: 5vw;
-    }
-
-    #logo-text{
-        font-size: 2.5vw;   
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #logo-image{
-        width: 7vw;
-    }
-
-    #logo-text{
-        font-size: 3.5vw;   
-    }
 }
