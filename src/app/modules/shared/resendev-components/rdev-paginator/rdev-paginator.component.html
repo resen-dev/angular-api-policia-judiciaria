@@ -1,10 +1,18 @@
-<div class="paginator">
+<div class="paginator border">
     <div class="buttons-container">
-        <button [disabled]="isFirstPage()" (click)="previousPage()">previous</button>
+        <button [ngClass]="{ 'disabled': isFirstPage() }" [disabled]="isFirstPage()" (click)="previousPage()">
+            <span class="material-symbols-outlined">
+                chevron_left
+            </span>
+        </button>
         <small>{{currentPage + 1}}</small>
         <small *ngIf="totalPages"> - </small>
         <small *ngIf="totalPages">{{totalPages}}</small>
-        <button [disabled]="isLastPage()" (click)="nextPage()">next</button>
+        <button [ngClass]="{ 'disabled': isLastPage() }" [disabled]="isLastPage()" (click)="nextPage()">
+            <span class="material-symbols-outlined">
+                chevron_right
+            </span>
+        </button>
     </div>
     <small *ngIf="showResultsPerPage">{{resultsPerPageLabel}}: {{resultsPerPage}}</small>
     <small *ngIf="totalElements">{{totalElementsLabel}}: {{totalElements}}</small>

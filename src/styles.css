@@ -4,8 +4,8 @@
     --main-text-color: rgba(216,217,220,255);
     --border-color: rgba(201, 201, 201, 0.5);    
     --secondary-text-color: rgb(210, 217, 221);
-    --button-background-color: rgb(77, 78, 80);
-    --button-background-color-hover: rgb(72, 72, 75);
+    --button-background-color: rgb(154, 174, 226);
+    --button-background-color-hover: rgb(135, 155, 206);
     --form-background-color: rgb(95, 95, 109);
     --form-placeholder-text-color: rgb(197, 197, 204);
     --person-card-background: #ededed;
@@ -53,30 +53,45 @@ select::placeholder {
 }
 
 .fa {
-    padding: 10px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  .fa:hover {
-    opacity: 0.9;
-    cursor: pointer;
-  }
-  
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .fa-whatsapp {
-    background: #6c8f55;
-    color: white;
-  }
-  
-  .fa-instagram {
-    background: #cf3636;
-    color: white;
-  }
-  
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-whatsapp {
+  background: #6c8f55;
+  color: white;
+}
+
+.fa-instagram {
+  background: #cf3636;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px; 
+}
+

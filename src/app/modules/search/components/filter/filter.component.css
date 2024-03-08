@@ -48,3 +48,7 @@ p {
 .filter-header:hover {
     cursor: pointer
 }
+
+.filter-header > span{
+    color: var(--button-background-color)
+}
