@@ -1,14 +1,31 @@
-:root {
+.dark {
     --body-background-color: rgba(37,40,45,255);
     --main-background-color: rgba(12,15,20,255);
     --main-text-color: rgba(216,217,220,255);
-    --border-color: rgba(201, 201, 201, 0.5);    
     --secondary-text-color: rgb(210, 217, 221);
+    --border-color: rgba(201, 201, 201, 0.5);    
     --button-background-color: rgb(154, 174, 226);
     --button-background-color-hover: rgb(135, 155, 206);
+    --button-text-color: rgba(12,15,20,255);
     --form-background-color: rgb(95, 95, 109);
     --form-placeholder-text-color: rgb(197, 197, 204);
+    --filtro-imagem: brightness(0) invert(.7);
     --person-card-background: #ededed;
+}
+
+.light {
+  --body-background-color: rgb(228, 223, 223);
+  --main-background-color: rgb(207, 207, 207);
+  --main-text-color: rgba(37, 40, 45, 1);
+  --secondary-text-color: rgb(37, 40, 45);
+  --border-color: rgba(37, 40, 45, 0.5);
+  --button-background-color: rgb(136, 156, 207);
+  --button-background-color-hover: rgb(118, 137, 185);
+  --button-text-color: rgba(12,15,20);
+  --form-background-color: rgb(210, 217, 221);
+  --form-placeholder-text-color: rgb(95, 95, 109);
+  --person-card-background: #ededed;
+  --filtro-imagem: brightness(0) invert(.2);
 }
 
 html, body, h1, h2, h3, h4, h5, h6, p {
