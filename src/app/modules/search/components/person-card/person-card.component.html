@@ -1,0 +1,22 @@
+<div class="person-card-container" (click)="click()">
+    <ng-container *ngIf="person?.urlFoto; else noPhoto">
+        <img [src]="person?.urlFoto" alt="Foto de: {{ person?.nome || 'Não informado' }}" class="person-card-image"/>
+    </ng-container>
+    <ng-template #noPhoto>
+        <img src="../../../../../assets/svg/sem-foto.svg" alt="Sem foto" class="person-card-image"/>
+    </ng-template>
+
+    <div class="person-card-info">
+        <h4>{{person?.nome}}</h4>
+        <small>{{person?.idade}}, {{person?.sexo}}</small>
+        <div class="info-block">
+            <h5>Data:</h5>
+            <p>{{person?.ultimaOcorrencia?.dtDesaparecimento | date:'dd/MM/yyyy' || 'Não informado'}}</p>
+        </div>
+        <div class="info-block">
+            <h5>Local:</h5>
+            <p>{{person?.ultimaOcorrencia?.localDesaparecimentoConcat || 'Não informado'}}</p>
+        </div>
+    </div>
+        
+</div>

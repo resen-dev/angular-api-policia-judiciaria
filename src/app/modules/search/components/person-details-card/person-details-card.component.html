@@ -1,0 +1,38 @@
+<div class="container" *ngIf="(searchfacade.selectedPerson$ | async) as selectedPerson">
+    <ng-container *ngIf="selectedPerson.urlFoto; else noPhoto">
+        <img [src]="selectedPerson.urlFoto" alt="Foto de: {{ selectedPerson.nome || 'Não informado' }}" class="person-card-image"/>
+    </ng-container>
+    <ng-template #noPhoto>
+        <img src="../../../../../assets/svg/sem-foto.svg" alt="Sem foto" class="person-card-image"/>
+    </ng-template>
+
+    <div class="info">
+        <h3>{{selectedPerson.sexo === 'FEMININO' ? 'DESAPARECIDA' : 'DESAPARECIDO'}}</h3>
+
+        <h2>{{selectedPerson.nome}}</h2>
+
+        <div class="info-block">
+            <h5>Data do desaparecimento:</h5>
+            <p>{{selectedPerson?.ultimaOcorrencia?.dtDesaparecimento | date:'dd/MM/yyyy' || 'Não informado'}}</p>
+        </div>
+        <div class="info-block">
+            <h5>Local do desaparecimento:</h5>
+            <p>{{selectedPerson?.ultimaOcorrencia?.localDesaparecimentoConcat || 'Não informado'}}</p>
+        </div>
+
+        <ng-container *ngIf="selectedPerson.ultimaOcorrencia.ocorrenciaEntrevDesapDTO">
+            <div class="info-block-c">
+                <h5>Informações adicionais:</h5>
+                <p> {{selectedPerson.ultimaOcorrencia.ocorrenciaEntrevDesapDTO.informacao || 'Não informado'}}</p>
+            </div>
+            <div class="info-block-c">
+                <h5>Vestimentas no momento do desaparecimento:</h5>
+                <p> {{selectedPerson.ultimaOcorrencia.ocorrenciaEntrevDesapDTO.vestimentasDesaparecido || 'Não informado'}}</p>
+            </div>
+        </ng-container>
+
+        <div class="share-container">
+            
+        </div>
+    </div>
+</div>

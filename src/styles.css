@@ -8,6 +8,7 @@
     --button-background-color-hover: rgb(72, 72, 75);
     --form-background-color: rgb(95, 95, 109);
     --form-placeholder-text-color: rgb(197, 197, 204);
+    --person-card-background: #ededed;
 }
 
 html, body, h1, h2, h3, h4, h5, h6, p {
@@ -16,8 +17,8 @@ html, body, h1, h2, h3, h4, h5, h6, p {
 }
 
 html, body {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
     background-color: var(--body-background-color);
 }
 

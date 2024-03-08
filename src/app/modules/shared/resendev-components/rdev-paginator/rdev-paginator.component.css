@@ -1,0 +1,23 @@
+.paginator{
+    width: 100%;
+    color: var(--secondary-text-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background-color: var(--main-background-color);
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    border-radius: 8px;
+}
+
+small {
+    font-family: 'Lato', sans-serif;
+}
+
+.buttons-container{
+    display: flex;
+    margin: auto;
+    gap: 10px;
+    align-items: center;
+}

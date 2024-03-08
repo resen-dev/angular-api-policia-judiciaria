@@ -1,0 +1,7 @@
+<div class="list">
+    <app-person-card 
+        *ngFor="let person of persons" 
+        [person]="person"
+        (onClick)="searchFacade.showPersonDetails($event)">
+    </app-person-card>
+</div>

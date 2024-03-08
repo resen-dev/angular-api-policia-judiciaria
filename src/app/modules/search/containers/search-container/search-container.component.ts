@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchFacade } from '../../facade/search.facade';
 
 @Component({
   selector: 'app-search-container',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor(protected searchFacade: SearchFacade) { }
 
   ngOnInit(): void {
+
   }
 
 }

@@ -13,9 +13,9 @@
     <p>Idade</p>
     <div class="idade">
         <rdev-number-input class="input-small"
-            placeHolder="Mínima (1)"
+            placeHolder="Mínima (0)"
             (onInputChange)="searchFacade.setFilterAgeMin($event)"
-            [min]="1"
+            [min]="0"
             [max]="99"
             [style]="{'width': '100%'}">
         </rdev-number-input>
@@ -36,4 +36,10 @@
         [style]="{'width': '100%'}"
         (onOptionChange)="searchFacade.setFilterGenre($event)">
     </rdev-combobox-input>
+
+    <rdev-button class="button"
+        label="BUSCAR"
+        icon="search"
+        (onClick)="searchFacade.resetSearch()">
+    </rdev-button>
 </aside>

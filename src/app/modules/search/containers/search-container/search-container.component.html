@@ -1,8 +1,19 @@
-<section id="search" class="grid">
+<section id="search">
     <div class="filter-container">
         <app-filter></app-filter>
     </div>
-    <div class="list-container">
-
+    <div class="list-container" *ngIf="(searchFacade.persons$ | async) as persons">
+            <div class="list">
+                <app-person-card-list [persons]="persons"></app-person-card-list>
+            </div>
+            <rdev-paginator  *ngIf="(searchFacade.paginator$ | async) as paginator"
+                [currentPage]="paginator.page!"
+                [resultsPerPage]="12"
+                [resultsPerPageLabel]="'Resultados'"
+                [totalElements]="(searchFacade.totalElements$ | async) || 0"
+                [totalPages]="(searchFacade.totalPages$ | async) || 0"
+                [pageChangeOnInit]="true"
+                (pageChange)="searchFacade.updatePaginatorAndSearch($event)">
+            </rdev-paginator>
     </div>
 </section>

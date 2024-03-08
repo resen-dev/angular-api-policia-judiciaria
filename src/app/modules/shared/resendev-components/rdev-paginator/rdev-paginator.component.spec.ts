@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PeopleCardListComponent } from './people-card-list.component';
+import { RdevPaginatorComponent } from './rdev-paginator.component';
 
-describe('PeopleCardListComponent', () => {
-  let component: PeopleCardListComponent;
-  let fixture: ComponentFixture<PeopleCardListComponent>;
+describe('RdevPaginatorComponent', () => {
+  let component: RdevPaginatorComponent;
+  let fixture: ComponentFixture<RdevPaginatorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PeopleCardListComponent ]
+      declarations: [ RdevPaginatorComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PeopleCardListComponent);
+    fixture = TestBed.createComponent(RdevPaginatorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

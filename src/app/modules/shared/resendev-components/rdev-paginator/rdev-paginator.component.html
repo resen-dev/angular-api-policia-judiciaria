@@ -1,0 +1,11 @@
+<div class="paginator">
+    <div class="buttons-container">
+        <button [disabled]="isFirstPage()" (click)="previousPage()">previous</button>
+        <small>{{currentPage + 1}}</small>
+        <small *ngIf="totalPages"> - </small>
+        <small *ngIf="totalPages">{{totalPages}}</small>
+        <button [disabled]="isLastPage()" (click)="nextPage()">next</button>
+    </div>
+    <small *ngIf="showResultsPerPage">{{resultsPerPageLabel}}: {{resultsPerPage}}</small>
+    <small *ngIf="totalElements">{{totalElementsLabel}}: {{totalElements}}</small>
+</div>
