@@ -8,9 +8,15 @@ import { SearchFacade } from '../../facade/search.facade';
 })
 export class FilterComponent implements OnInit {
 
+  isCollapsed: boolean = true;
+
   constructor(protected searchFacade: SearchFacade) { }
 
   ngOnInit(): void {
+  }
+
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
   }
 
 }

@@ -20,7 +20,7 @@ export class SearchFacade{
     persons$: Observable<Person[]> = this.personState.persons$
     totalElements$: Observable<number> = this.personState.totalElements$
     totalPages$: Observable<number> = this.personState.totalPages$
-    selectedPerson$: Observable<Person> = this.personState.selectedPerson$
+    selectedPerson$: Observable<Person | undefined> = this.personState.selectedPerson$
 
     constructor(
         private filterState: FilterState,
@@ -70,6 +70,17 @@ export class SearchFacade{
 
     showPersonDetails(person: Person){
         this.personState.setPerson(person)
-        this.router.navigate(['/person-details'])
+        this.router.navigate(['/person-details/', person.id])
     }
+
+    getById(id: number) {
+        this.searchApi.getById(id).subscribe({
+            next: response => {
+                this.personState.setPerson(response)
+            },
+            error: error => {
+                console.log(error)
+            }
+        })
+      }
 }

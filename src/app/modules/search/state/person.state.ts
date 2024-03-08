@@ -10,7 +10,7 @@ export class PersonState{
     private readonly _persons = new BehaviorSubject<Person[]>([])
     private readonly _totalPages = new BehaviorSubject<number>(0)
     private readonly _totalElements = new BehaviorSubject<number>(0)
-    private readonly _selectedPerson = new BehaviorSubject<Person>({} as Person)
+    private readonly _selectedPerson = new BehaviorSubject<Person | undefined>(undefined)
 
     get persons$(): Observable<Person[]>{
         return this._persons.asObservable()
@@ -24,7 +24,7 @@ export class PersonState{
         return this._totalElements.asObservable()
     }
 
-    get selectedPerson$(): Observable<Person>{
+    get selectedPerson$(): Observable<Person | undefined>{
         return this._selectedPerson.asObservable()
     }
 

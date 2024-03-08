@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchFacade } from '../../facade/search.facade';
+import { Person } from 'src/app/models/person';
+import { ShareService } from 'src/app/services/share.service';
+import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-person-details-card',
@@ -8,9 +12,22 @@ import { SearchFacade } from '../../facade/search.facade';
 })
 export class PersonDetailsCardComponent implements OnInit {
 
-  constructor(protected searchfacade: SearchFacade) { }
+  protected selectedPerson$: Observable<Person | undefined> = this.searchfacade.selectedPerson$;
+
+  constructor(
+    protected searchfacade: SearchFacade,
+    protected shareService: ShareService,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.selectedPerson$.subscribe({
+      next: (person) => {
+        if (!person) {
+          this.route.params.subscribe(params => {
+            this.searchfacade.getById(params['id'])
+          });
+        }
+      }
+    });
   }
-
 }

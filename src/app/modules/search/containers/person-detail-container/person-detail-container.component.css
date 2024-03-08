@@ -1,0 +1,9 @@
+#person-details{
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    padding: 18px;
+    box-sizing: border-box;
+    justify-content: center;
+    overflow: auto;
+}

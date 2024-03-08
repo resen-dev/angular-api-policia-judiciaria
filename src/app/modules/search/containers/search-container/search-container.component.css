@@ -35,3 +35,20 @@
 
     padding: 4px 8px 8px 8px;
 }
+
+@media (max-width: 1100px) {
+    .container{
+        flex-direction: column;
+    }
+    #search {
+        grid-template-areas:
+            'filter-container filter-container'
+            'list-container list-container';
+    }
+    .filter-container{
+        min-width: 400px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

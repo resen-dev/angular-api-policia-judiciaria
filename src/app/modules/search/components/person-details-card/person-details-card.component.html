@@ -15,7 +15,7 @@
             <h5>Data do desaparecimento:</h5>
             <p>{{selectedPerson?.ultimaOcorrencia?.dtDesaparecimento | date:'dd/MM/yyyy' || 'Não informado'}}</p>
         </div>
-        <div class="info-block">
+        <div class="info-block-c">
             <h5>Local do desaparecimento:</h5>
             <p>{{selectedPerson?.ultimaOcorrencia?.localDesaparecimentoConcat || 'Não informado'}}</p>
         </div>
@@ -31,8 +31,10 @@
             </div>
         </ng-container>
 
+        <p class="share-label">Compartilhe: </p>
         <div class="share-container">
-            
+            <a (click)="shareService.sharePersonDetailFacebook(selectedPerson)" class="fa fa-facebook"></a>
+            <a (click)="shareService.sharePersonDetailWhatsApp(selectedPerson)" class="fa fa-whatsapp"></a>
         </div>
     </div>
 </div>

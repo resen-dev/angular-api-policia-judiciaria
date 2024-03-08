@@ -30,3 +30,19 @@ p {
 .button{
     padding-top: 25px;
 }
+
+.collapsed {
+    display: none;
+}
+
+.filter-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--main-text-color);
+    user-select: none;
+}
+
+.filter-header:hover {
+    cursor: pointer
+}

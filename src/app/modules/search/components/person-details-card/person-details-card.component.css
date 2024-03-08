@@ -1,6 +1,8 @@
 .container{
     display: flex;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .person-card-image {
@@ -14,11 +16,14 @@
 
 .info{
     display: flex;
+    min-height: 600px;
+    width: fit-content;
+    padding-right: 15px;
     flex-direction: column;
-    flex-grow: 1;
     background-color: var(--person-card-background);
     max-width: 550px;
-    border-radius: 0 4px 4px 0
+    border-radius: 0 4px 4px 0;
+    box-sizing: border-box;
 }
 
 .info > *:not(:first-child) {
@@ -71,22 +76,48 @@ h2{
 }
 
 .share-container{
-    margin: auto 10px 10px 0;
-    background-color: red;
     box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
+.share-label{
+    margin-top: auto;
+    font-size: 18px;
+    font-weight: bold;
+}
 
-@media (max-width: 600px) {
-    .person-card-image {
-        width: 400px;
-        height: 500px;
+@media (max-width: 1000px) {
+    .container{
+        flex-direction: column;
     }
-}
 
-@media (max-width: 450px) {
     .person-card-image {
-        width: 350px;
-        height: 450px;
+        width:95%;
+        max-height: 600px;
+        object-fit: cover;
+        overflow: hidden; 
+        border-radius: 4px 4px 0 0;
+        border-right: solid 0px rgb(255, 0, 0);
+    }
+
+    .info{
+        width: 95%;
+        max-width: 95%;
+        background-color: var(--person-card-background);
+        border-radius: 0 0 4px 4px;
+        min-height:none;
+    }
+    h3{ 
+        margin-top: 25px;
+        font-size: 8vw;
+        text-align: center;
+        font-family: Roboto, Helvetica Neue, sans-serif;
+        background-color: rgb(255, 0, 0);
+        border-radius: 0;
+        width: 100%;
+        box-sizing: border-box;
     }
 }

@@ -51,3 +51,32 @@ input[type="number"]::placeholder,
 select::placeholder {
     color: var(--form-placeholder-text-color)
 }
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .fa:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-whatsapp {
+    background: #6c8f55;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #cf3636;
+    color: white;
+  }
+  
