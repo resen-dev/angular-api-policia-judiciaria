@@ -6,6 +6,7 @@ import { RdevTextInputComponent } from './resendev-components/rdev-text-input/rd
 import { RdevNumberInputComponent } from './resendev-components/rdev-number-input/rdev-number-input.component';
 import { RdevComboboxInputComponent } from './resendev-components/rdev-combobox-input/rdev-combobox-input.component';
 import { RdevPaginatorComponent } from './resendev-components/rdev-paginator/rdev-paginator.component';
+import { EmptyResultsComponent } from './components/empty-results/empty-results.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RdevPaginatorComponent } from './resendev-components/rdev-paginator/rde
     RdevTextInputComponent,
     RdevNumberInputComponent,
     RdevComboboxInputComponent,
-    RdevPaginatorComponent
+    RdevPaginatorComponent,
+    EmptyResultsComponent
   ],
   imports: [
     CommonModule
@@ -25,7 +27,8 @@ import { RdevPaginatorComponent } from './resendev-components/rdev-paginator/rde
     RdevTextInputComponent,
     RdevNumberInputComponent,
     RdevComboboxInputComponent,
-    RdevPaginatorComponent
+    RdevPaginatorComponent,
+    EmptyResultsComponent
   ]
 })
 export class SharedModule { }

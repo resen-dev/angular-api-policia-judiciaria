@@ -82,5 +82,9 @@ export class SearchFacade{
                 console.log(error)
             }
         })
-      }
+    }
+
+    resetFilter() {
+        this.filterState.setFilter({ageMax: undefined, ageMin: undefined, genre: undefined, nome:undefined} as FilterOptions)
+    }
 }

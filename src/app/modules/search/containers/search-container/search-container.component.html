@@ -3,14 +3,16 @@
         <app-filter></app-filter>
     </div>
     <div class="list-container" *ngIf="(searchFacade.persons$ | async) as persons">
-            <div class="list">
+            <div class="list" *ngIf="persons && persons.length > 0">
                 <app-person-card-list [persons]="persons"></app-person-card-list>
             </div>
+                <app-empty-results *ngIf="!persons || persons.length === 0"></app-empty-results>
             <rdev-paginator  *ngIf="(searchFacade.paginator$ | async) as paginator"
                 [currentPage]="paginator.page!"
                 [resultsPerPage]="12"
-                [resultsPerPageLabel]="'Resultados'"
+                [resultsPerPageLabel]="'Exibindo'"
                 [totalElements]="(searchFacade.totalElements$ | async) || 0"
+                [totalElementsLabel]="'Total'"
                 [totalPages]="(searchFacade.totalPages$ | async) || 0"
                 [pageChangeOnInit]="true"
                 (pageChange)="searchFacade.updatePaginatorAndSearch($event)">
